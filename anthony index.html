@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Software Engineer Portfolio</title>
+    <style>
+        /* Your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .toggle-button {
+            display: none;
+            cursor: pointer;
+        }
+        .bar {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background-color: #fff;
+            margin: 5px auto;
+            transition: 0.3s;
+        }
+        nav ul.collapsed {
+            display: none;
+        }
+        nav ul.expanded {
+            display: block;
+        }
+       footer {
+        background-color: grey;
+
+        }
+        /* ... Other CSS styles ... */
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="toggle-button">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="collapsed">
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about">
+        <h1>About Me</h1>
+        <!-- Your about me content here -->
+    </section>
+
+    <section id="portfolio">
+        <h1>Portfolio</h1>
+        <!-- Your project showcase and details here -->
+    </section>
+
+    <section id="skills">
+        <h1>Skills</h1>
+        <!-- Your skills list here -->
+    </section>
+
+    <section id="contact">
+        <h1>Contact</h1>
+        <!-- Your contact information and form here -->
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Your Name. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // JavaScript code here
+        const toggleButton = document.querySelector('.toggle-button');
+        const menu = document.querySelector('nav ul');
+
+        toggleButton.addEventListener('click', () => {
+            menu.classList.toggle('expanded');
+        });
+    </script>
+</body>
+</html>
