@@ -1,12 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Software Engineer Portfolio</title>
-    <style>
-        /* Your CSS styles here */
-        body {
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Form</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+  }
+  .container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  input, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+
+  }
+  body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
@@ -128,43 +157,8 @@ width: 200px;
   left: 50%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-        /* ... Other CSS styles ... */
-    }
-    .fa {
-  padding: 20px;
-  font-size: 30px;
-  width: 50px;
-  text-align: center;
-  text-decoration: none;
-}
-
-/* Add a hover effect if you want */
-.fa:hover {
-  opacity: 0.7;
-}
-
-/* Set a specific color for each brand */
-
-/* Facebook */
-.fa-linkedin {
-  background: #grey;
-  color: white;
-}
-
-/* Twitter */
-.fa-twitter {
-  background: #grey;
-  color: skyblue;
-}
-.fa-github {
-  background: #grey;
-  color: black;
-  width: 50%;
-}
-    </style>
-</head>
-<body>
-    <div class="header">
+</style>
+<div class="header">
   <a href="#default" class="logo">Anthony Chumba</a>
   <div class="header-right">
     <a class="active" href="#home">Home</a>
@@ -178,33 +172,44 @@ width: 200px;
   
 
 </div>
-<img src="img_6332.jpg" class="center">
-<h1 style="text-align:center;"><br><strong>Hello, my name is Anthony</br></strong> </h1>
-    <h2 style="text-align:center;">I am a professional Software Developer from Eldoret, Kenya</h2>
-     <div class="centerr">
-     <a href = "Chumba resume.pdf"
-      Download = "Resume">
-         <button type = "button"> RESUME </button>
-      </a>
-  </div>
-    <footer>
-        <p style="text-align:center;">&copy; 2023masaicodes. All rights reserved.</p>
-       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<!-- Add font awesome icons -->
-<a href="#" class="fa fa-linkedin"></a>
-<a href="#" class="fa fa-twitter"></a>
-<a href="#" class="fa fa-github"></a>
+<body>
+
+<div class="container">
+  <h2>Contact Us</h2>
+  <form id="contactForm">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+    
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+    
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" rows="4" required></textarea>
+    
+    <button type="submit">Submit</button>
+  </form>
+</div>
+
+<script>
+  const contactForm = document.getElementById('contactForm');
+  
+  contactForm.addEventListener('submit', function(event) {
+    event.preventDefault();
+    const formData = new FormData(contactForm);
+    // You can use the formData to send the data to your server using fetch or other methods
+    // For demonstration purposes, we'll just log the form data to the console.
+    for (const [key, value] of formData.entries()) {
+      console.log(`${key}: ${value}`);
+    }
+    alert('Form submitted successfully!');
+  });
+</script>
+
+</body>
+ <footer>
+        <p style="text-align:center;">&copy; 2023masaicodes. All rights reserved.</p>
+       
     </footer>
 
-    <script>
-        // JavaScript code here
-        const toggleButton = document.querySelector('.toggle-button');
-        const menu = document.querySelector('nav ul');
-
-        toggleButton.addEventListener('click', () => {
-            menu.classList.toggle('expanded');
-        });
-    </script>
-</body>
 </html>
